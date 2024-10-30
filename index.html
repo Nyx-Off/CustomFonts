@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Font</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>✨ Custom Fonts</h1>
+    <div class="container">
+        <div class="input-column">
+            <textarea 
+                id="inputText" 
+                placeholder="Écrivez ou collez votre texte ici..."
+                oninput="convertText()"
+                spellcheck="false"
+                autofocus
+            ></textarea>
+        </div>
+        <div class="output-column" id="results">
+            <!-- Les résultats seront affichés ici -->
+        </div>
+    </div>
+
+    <script src="textStyles.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
