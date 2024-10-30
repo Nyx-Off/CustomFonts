@@ -7,6 +7,8 @@
 ![Static Badge](https://img.shields.io/badge/CSS-black?style=plastic&logo=css3&logoColor=white&logoSize=auto&color=blue)
 
 
+![Screen Shot](https://raw.githubusercontent.com/Nyx-Off/CustomFonts/refs/heads/main/image.png)
+
 Un convertisseur de texte élégant qui transforme votre texte en différents styles typographiques uniques, idéal pour personnaliser vos messages sur Discord et autres plateformes sociales.
 
 ## ✨ Fonctionnalités
