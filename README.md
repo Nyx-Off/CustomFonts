@@ -1,6 +1,12 @@
 
 # Custom Fonts 🔤
 
+![Static Badge](https://img.shields.io/badge/Contributeur-1-brightgreen?style=flat&logo=clubhouse&logoColor=white&logoSize=auto) ![License](https://img.shields.io/github/license/) 
+![Static Badge](https://img.shields.io/badge/JavaScript-black?style=plastic&logo=javascript&logoColor=white&logoSize=auto&color=purple)
+![Static Badge](https://img.shields.io/badge/HTML-black?style=plastic&logo=html5&logoColor=white&logoSize=auto&color=orange)
+![Static Badge](https://img.shields.io/badge/CSS-black?style=plastic&logo=css3&logoColor=white&logoSize=auto&color=blue)
+
+
 Un convertisseur de texte élégant qui transforme votre texte en différents styles typographiques uniques, idéal pour personnaliser vos messages sur Discord et autres plateformes sociales.
 
 ## ✨ Fonctionnalités
