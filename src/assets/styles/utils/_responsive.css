@@ -1,0 +1,171 @@
+/**
+ * Styles responsifs et media queries
+ */
+
+/* Tablette et mobile (< 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+    
+    .input-section {
+        min-height: 300px;
+    }
+    
+    .output-section {
+        min-height: 400px;
+    }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 768px) {
+    /* Layout global */
+    .app-main {
+        padding: var(--space-md);
+    }
+    
+    .container {
+        padding: var(--space-lg);
+        gap: var(--space-lg);
+        min-height: auto;
+    }
+    
+    /* Typography responsive */
+    .app-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .app-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    /* Composants */
+    .text-input__field {
+        font-size: var(--font-size-base);
+        min-height: 150px;
+    }
+    
+    .output-item {
+        padding: var(--space-md);
+    }
+    
+    .output-item__text {
+        font-size: var(--font-size-base);
+    }
+    
+    /* Footer */
+    .app-footer {
+        padding: var(--space-lg);
+    }
+}
+
+/* Petit mobile (< 480px) */
+@media (max-width: 480px) {
+    /* Spacing réduit */
+    :root {
+        --space-xs: 0.125rem;
+        --space-sm: 0.25rem;
+        --space-md: 0.75rem;
+        --space-lg: 1rem;
+        --space-xl: 1.5rem;
+        --space-2xl: 2rem;
+        --space-3xl: 3rem;
+    }
+    
+    /* Layout */
+    .app-main {
+        padding: var(--space-sm);
+    }
+    
+    .container {
+        padding: var(--space-md);
+        border-radius: var(--border-radius-md);
+    }
+    
+    /* Typography */
+    .app-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .app-subtitle {
+        font-size: var(--font-size-sm);
+    }
+    
+    /* Boutons */
+    .output-item__copy {
+        padding: var(--space-sm) var(--space-md);
+        font-size: var(--font-size-sm);
+    }
+    
+    .output-filter__btn {
+        padding: var(--space-xs) var(--space-sm);
+        font-size: var(--font-size-sm);
+    }
+}
+
+/* Préférences utilisateur */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Mode impression */
+@media print {
+    /* Masquer les éléments non essentiels */
+    .app-header,
+    .app-footer,
+    .output-display__controls,
+    .output-item__copy,
+    .text-input__actions,
+    .notification-container {
+        display: none !important;
+    }
+    
+    /* Styles d'impression */
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .container {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    
+    .output-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+/* Écrans larges (> 1536px) */
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1600px;
+    }
+    
+    .app-title {
+        font-size: 3rem;
+    }
+}
+
+/* Orientation paysage sur mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .app-header {
+        padding: var(--space-lg) var(--space-md);
+    }
+    
+    .container {
+        min-height: auto;
+    }
+    
+    .text-input__field {
+        min-height: 100px;
+    }
+}

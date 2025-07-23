@@ -1,0 +1,143 @@
+/**
+ * Styles pour le composant de saisie de texte
+ */
+
+ .text-input {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.text-input__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+}
+
+.text-input__label {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+}
+
+.text-input__char-count {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    font-variant-numeric: tabular-nums;
+}
+
+.char-count__current {
+    color: var(--text-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+.char-count__max {
+    color: var(--text-secondary);
+}
+
+.text-input__wrapper {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-input__field {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    padding: var(--space-lg);
+    padding-right: 3.5rem;
+    background: var(--bg-input);
+    color: var(--text-primary);
+    border: 2px solid transparent;
+    border-radius: var(--border-radius-lg);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    resize: none;
+    transition: var(--transition-fast);
+}
+
+.text-input__field:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    background: var(--bg-hover);
+    box-shadow: 0 0 0 4px rgba(114, 137, 218, 0.1);
+}
+
+.text-input__field::placeholder {
+    color: var(--text-secondary);
+}
+
+.text-input__actions {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.text-input__clear {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.text-input__clear:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+    border-color: var(--border-color-hover);
+}
+
+.text-input__clear:active {
+    transform: scale(0.95);
+}
+
+.text-input__clear svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Scrollbar personnalisée pour le textarea */
+.text-input__field::-webkit-scrollbar {
+    width: 8px;
+}
+
+.text-input__field::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.text-input__field::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: var(--border-radius-sm);
+}
+
+.text-input__field::-webkit-scrollbar-thumb:hover {
+    background: var(--border-color-hover);
+}
+
+/* États */
+.text-input__field:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .text-input__field {
+        font-size: var(--font-size-base);
+        padding: var(--space-md);
+        min-height: 150px;
+    }
+}

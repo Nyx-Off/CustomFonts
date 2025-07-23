@@ -1,0 +1,62 @@
+/**
+ * Styles pour l'en-tête de l'application
+ */
+
+ .app-header {
+    text-align: center;
+    padding: var(--space-2xl) var(--space-md);
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-main) 100%);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.app-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--accent-primary);
+    margin: 0 0 var(--space-sm) 0;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-title__icon {
+    font-size: 1.2em;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+.app-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+    margin: 0;
+    font-weight: var(--font-weight-normal);
+}
+
+/* Animation scintillement */
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1) rotate(5deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .app-header {
+        padding: var(--space-xl) var(--space-sm);
+    }
+    
+    .app-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .app-subtitle {
+        font-size: var(--font-size-base);
+    }
+}

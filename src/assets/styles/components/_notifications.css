@@ -1,0 +1,137 @@
+/**
+ * Styles pour le système de notifications
+ */
+
+ .notification-container {
+    position: fixed;
+    bottom: var(--space-xl);
+    right: var(--space-xl);
+    z-index: var(--z-notification);
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--space-md);
+    pointer-events: none;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    min-width: 300px;
+    max-width: 400px;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-xl);
+    pointer-events: auto;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all var(--transition-normal);
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.notification.hide {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.notification__icon {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.notification__message {
+    flex: 1;
+    font-size: var(--font-size-base);
+    color: var(--text-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+.notification__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: transparent;
+    color: var(--text-secondary);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.notification__close:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+/* Types de notifications */
+.notification--success {
+    border-left: 4px solid var(--success);
+}
+
+.notification--success .notification__icon {
+    color: var(--success);
+}
+
+.notification--error {
+    border-left: 4px solid var(--error);
+}
+
+.notification--error .notification__icon {
+    color: var(--error);
+}
+
+.notification--warning {
+    border-left: 4px solid var(--warning);
+}
+
+.notification--warning .notification__icon {
+    color: var(--warning);
+}
+
+.notification--info {
+    border-left: 4px solid var(--info);
+}
+
+.notification--info .notification__icon {
+    color: var(--info);
+}
+
+/* Animation d'entrée alternative (du bas) */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .notification-container {
+        left: var(--space-md);
+        right: var(--space-md);
+        bottom: var(--space-md);
+    }
+    
+    .notification {
+        min-width: auto;
+        max-width: none;
+        width: 100%;
+    }
+}
